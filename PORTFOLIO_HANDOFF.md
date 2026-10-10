@@ -7,7 +7,7 @@
 
 ## 📌 1. Project Overview & Live Links
 
-- **Owner**: Md Arbaaz (Senior UX / Product Designer with 6+ years experience at Repindia)
+- **Owner**: Md Arbaaz (Senior UX/UI Designer with 6+ years experience across Enterprise, E-Commerce & SaaS)
 - **Live Production URL**: [https://designarbaaz.github.io/Portfolio/](https://designarbaaz.github.io/Portfolio/)
 - **GitHub Repository**: [https://github.com/designarbaaz/Portfolio](https://github.com/designarbaaz/Portfolio)
 - **Local Development Host**: `http://localhost:8080/`
@@ -105,8 +105,11 @@
 - Typography: Standardized to bold `700` normal style (no italics).
 
 ### 6. About & Experience Timeline (`#about`)
-- Left: Bio copy + Core Competency skill chips.
-- Right: Detailed experience timeline card (Repindia, Hero Realty, Kajaria Ceramics).
+- Left: Bio copy + 2×2 Core Competencies Matrix (Enterprise UX, Design Systems, B2B/SaaS, Prototyping).
+- Right: Detailed experience timeline card featuring verified roles from resume:
+  1. **Sr. UX/UI Designer** — Online Reputation Management Pvt. Ltd. (May 2022 — Present)
+  2. **UX/UI Designer** — E2logy Software Solutions Pvt. Ltd. (Sep 2019 — Apr 2022)
+  3. **Web & Graphic Designer** — UKS Technologies (Nov 2017 — Mar 2019)
 
 ### 7. Contact & Footer (`#contact`)
 - Floating contact card with email CTA (`designarbaaz@gmail.com`), social links (LinkedIn, Behance), and copyright.
