@@ -934,9 +934,9 @@ img {
   font-family: var(--font-display);
   font-style: normal;
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 1.25rem;
   line-height: 1;
-  letter-spacing: -0.03em;
+  letter-spacing: 0.02em;
   margin-bottom: 1.25rem;
 }
 
@@ -947,10 +947,11 @@ img {
 .pillar-title {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 1.4rem;
+  font-size: 1.85rem;
+  line-height: 1.2;
   color: #FFFFFF;
-  margin-bottom: 0.75rem;
-  letter-spacing: -0.02em;
+  margin-bottom: 0.85rem;
+  letter-spacing: -0.03em;
 }
 
 .pillar-desc {
