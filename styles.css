@@ -173,6 +173,33 @@ img {
   color: #191414;
 }
 
+.clock-icon {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.clock-hand-minute {
+  transform-origin: 12px 12px;
+  animation: clockSpin 4s linear infinite;
+}
+
+.clock-hand-hour {
+  transform-origin: 12px 12px;
+  animation: clockSpin 24s linear infinite;
+}
+
+@keyframes clockSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .status-indicator {
   width: 7px;
   height: 7px;
@@ -223,7 +250,7 @@ img {
 /* --- HERO SECTION (2-COLUMN OX-CREW REFERENCE) --- */
 .hero-section {
   min-height: 100vh;
-  padding-top: 8.5rem;
+  padding-top: clamp(11rem, 15vh, 13.5rem);
   padding-bottom: 4rem;
   position: relative;
   overflow: hidden;
@@ -630,18 +657,8 @@ img {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--clr-fuchsia);
+  color: var(--clr-klein);
   margin-bottom: 0.75rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.section-tag::before {
-  content: '';
-  width: 12px;
-  height: 2px;
-  background-color: var(--clr-fuchsia);
   display: inline-block;
 }
 
@@ -887,10 +904,6 @@ img {
   color: var(--clr-citric);
 }
 
-.pillars-section .section-tag::before {
-  background-color: var(--clr-citric);
-}
-
 .pillars-section .section-title {
   color: #FFFFFF;
 }
@@ -933,16 +946,13 @@ img {
 .pillar-num {
   font-family: var(--font-display);
   font-style: normal;
-  font-weight: 700;
-  font-size: 1.25rem;
+  font-weight: 500;
+  font-size: 0.88rem;
   line-height: 1;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.45);
   margin-bottom: 1.25rem;
 }
-
-.pillar-card:nth-child(1) .pillar-num { color: var(--clr-klein); }
-.pillar-card:nth-child(2) .pillar-num { color: var(--clr-fuchsia); }
-.pillar-card:nth-child(3) .pillar-num { color: var(--clr-citric); }
 
 .pillar-title {
   font-family: var(--font-display);
