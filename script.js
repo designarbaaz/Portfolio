@@ -220,9 +220,55 @@ function initMagneticButtons() {
   });
 }
 
+// --- THEME SWITCHER SYSTEM ---
+function initThemeSwitcher() {
+  const themeButtons = document.querySelectorAll('.theme-option-btn');
+  if (!themeButtons.length) return;
+
+  // Read saved theme or default to citric
+  let savedTheme = 'citric';
+  try {
+    savedTheme = localStorage.getItem('portfolio-theme') || 'citric';
+  } catch (e) {
+    // localStorage may be unavailable
+  }
+
+  applyTheme(savedTheme, false);
+
+  themeButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetTheme = btn.dataset.themeName;
+      applyTheme(targetTheme, true);
+    });
+  });
+
+  function applyTheme(themeName, persist) {
+    if (themeName && themeName !== 'citric') {
+      document.documentElement.setAttribute('data-theme', themeName);
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+    }
+
+    themeButtons.forEach(btn => {
+      const isActive = btn.dataset.themeName === themeName;
+      btn.classList.toggle('active', isActive);
+      btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    });
+
+    if (persist) {
+      try {
+        localStorage.setItem('portfolio-theme', themeName);
+      } catch (e) {
+        // Safe fallback
+      }
+    }
+  }
+}
+
 // Initialize on DOM load
 document.addEventListener('DOMContentLoaded', () => {
   initStatsCounter();
   initMagneticButtons();
   initLiveClock();
+  initThemeSwitcher();
 });

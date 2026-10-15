@@ -6,6 +6,16 @@
   <title>Md Arbaaz | Senior UX Designer & Product Strategist</title>
   <meta name="description" content="Portfolio of Md Arbaaz, Senior UX Designer with 6+ years experience creating high-converting, scalable digital products and design systems for enterprise brands.">
   <link rel="stylesheet" href="styles.css">
+  <script>
+    (function() {
+      try {
+        var t = localStorage.getItem('portfolio-theme');
+        if (t && t !== 'citric') {
+          document.documentElement.setAttribute('data-theme', t);
+        }
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
 
@@ -579,6 +589,24 @@
       </div>
     </div>
   </div>
+
+  <!-- THEME SWITCHER DOCK -->
+  <aside class="theme-dock" id="themeDock" aria-label="Theme selector">
+    <div class="theme-dock-inner">
+      <button class="theme-option-btn active" data-theme-name="citric" title="Citric Lime theme">
+        <span class="theme-swatch swatch-citric"></span>
+        <span class="theme-label">Citric</span>
+      </button>
+      <button class="theme-option-btn" data-theme-name="monochrome" title="White & Black theme">
+        <span class="theme-swatch swatch-mono"></span>
+        <span class="theme-label">Mono</span>
+      </button>
+      <button class="theme-option-btn" data-theme-name="dark" title="Dark Mode theme">
+        <span class="theme-swatch swatch-dark"></span>
+        <span class="theme-label">Dark</span>
+      </button>
+    </div>
+  </aside>
 
   <script src="script.js"></script>
 </body>
